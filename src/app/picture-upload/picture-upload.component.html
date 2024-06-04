@@ -1,0 +1,7 @@
+<h2>Upload Picture</h2>
+<form (ngSubmit)="onSubmit()" #pictureForm="ngForm">
+  <input type="file" (change)="onFileSelected($event)" accept="image/*" required>
+  <button type="submit" [disabled]="!selectedFile">Upload</button>
+  <div id="resutl_image"></div>
+
+</form>

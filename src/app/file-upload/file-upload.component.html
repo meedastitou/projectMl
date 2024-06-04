@@ -1,0 +1,6 @@
+<h2>Upload File</h2>
+<form (ngSubmit)="onSubmit()" #fileForm="ngForm">
+  <input type="file" (change)="onFileSelected($event)" required>
+  <button type="submit" [disabled]="!selectedFile">Upload</button>
+  <div id="resutl_signature"></div>
+</form>

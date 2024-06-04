@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [RouterModule],
+  template: `
+    <nav>
+      <a routerLink="/picture-upload">Picture Upload</a>
+      <a routerLink="/file-upload">File Upload</a>
+    </nav>
+    <router-outlet></router-outlet>
+  `
 })
-export class AppComponent {
-  title = 'angular_project';
-}
+export class AppComponent {}
